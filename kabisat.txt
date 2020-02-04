@@ -1,0 +1,18 @@
+deklarasi :
+
+int tahun
+int hasil
+
+
+
+Deskripsi :
+Start
+Read ('tahun')
+
+IF (( tahun MOD 4 == 0 )AND (tahun MOD 100 != 0 )) 
+THEN PRINT "Tahun Kabisat"
+ELSE IF (( tahun MOD 4 == 0 )AND (tahun MOD 100 == 0 ) AND (tahun MOD 400 == 0 )) 
+THEN PRINT "Tahun Kabisat"
+ELSE PRINT "Bukan Tahun Kabisat"
+END IF
+End

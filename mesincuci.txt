@@ -1,0 +1,21 @@
+deklarasi 
+int jum_pakaian 
+int jum_akhir
+START
+
+jum_pakaian <- 1
+jum_akhir <- 20
+
+READ(jum_pakaian,jum_akhir)
+
+WHILE(jum_pakaian<= jum_akhir)
+
+	IF (jum_pakaian == jum_akhir)
+		THEN write('nyalakan mesin cuci')
+	END IF
+
+	jum_pakaian <- jum_pakaian + 1
+
+END WHILE
+
+END

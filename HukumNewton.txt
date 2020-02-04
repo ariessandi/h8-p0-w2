@@ -1,0 +1,17 @@
+DEKLARASI
+float f
+float m
+float a
+
+START
+
+m<-600
+a<-2
+
+READ(a,m)
+
+Hitung resultan Gaya
+
+f<- a * m
+
+END

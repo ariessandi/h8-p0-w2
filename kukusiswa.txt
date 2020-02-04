@@ -1,0 +1,22 @@
+deklarasi 
+int jum_siswa
+int jum_akhir
+str jenis_kuku
+START
+
+jum_siswa <- 1
+jum_akhir <- 40
+
+READ(jum_siswa,jum_akhir,jenis_kuku)
+
+WHILE(jum_siswa <= jum_akhir)
+
+	IF (jenis_kuku=="panjang")
+		THEN write('siswa di hukum')
+	END IF
+
+	jum_siswa<- jum_siswa + 1
+
+END WHILE
+
+END
