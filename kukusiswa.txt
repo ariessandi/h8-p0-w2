@@ -1,4 +1,4 @@
-deklarasi 
+Deklarasi 
 int jum_siswa
 int jum_akhir
 str jenis_kuku
