@@ -13,15 +13,32 @@ console.log(todos);
 
 
 var student=["Fadi","Kholid","Juan"];
-
+var depan=[];
 var kamus="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
 for(var i = 0; i < student.length ; i++){
 
-  console.log(student[i][0]);
+  depan[i]=student[i][0];
+  //for(var j=0; j < kamus.length; j++){
+  
+  //}
+}
+console.log(depan);
+
+
+for(var i=0; i< depan.length; i++){
+  for(var j=0; j< depan.length - 1; j++){
+    if(depan[j] > depan[j + 1]){
+      var temp= depan[j + 1];
+      depan[j+1]=depan[j];
+      depan[j]=temp;
+    }
+  } 
 
 }
+
+console.log(depan);
 
 
 
