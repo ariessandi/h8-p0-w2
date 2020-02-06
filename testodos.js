@@ -134,3 +134,32 @@ for(var i=0; i< numbers.length; i++){
 }
 
 console.log(numbers);
+
+
+
+function balikString(kata){
+  var katabaru='';
+    for(i=kata.length-1; i>=0 ; i--){
+       katabaru +=kata[i]; 
+    }
+    return katabaru;
+}
+
+
+balikString("hello world!");
+
+var urut,temp;
+var strr=['f','a','c','g','d','b','e'];
+
+for(var i=0; i< strr.length; i++){
+  for(var j=0; j< strr.length; j++){
+    if(strr[j] > strr[j+1]){ . // f < a
+      temp = strr[j+1];   // temp =a
+      strr[j+1]=strr[j];   // strr[1]=f
+      strr[j]=temp;        // strr[0]= a
+
+    }
+  }
+}
+
+console.log(strr);
