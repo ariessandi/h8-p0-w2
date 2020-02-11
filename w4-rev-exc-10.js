@@ -1,27 +1,27 @@
 function changeMe(arr) {
-  // you can only write your code here!
 
-  var newarrz = [];
-  var newarry = [];
+    for (let i=0; i<arr.length; i++) {
+        let newarr = {};
 
-var year = 0;
+        for (let j=0; j<arr[i].length+1; j++) {
+            if (j === 0) {
+                console.log(i+1+'. '+arr[i][j]+' '+arr[i][j+1]+':');
+                newarr.firstName = arr[i][j];
+            } else if (j === 1) {
+                newarr.lastName = arr[i][j];
+            } else if (j === 2 ) {
+                newarr.gender = arr[i][j];
+            } else if (j === 3) {
+                if (arr[i][j] !== undefined) {
+                    newarr.age = new Date().getFullYear() - arr[i][j];
+                } else {
+                    newarr.age = 'Invalid Birth Year';
+                }
+            }
+        }
 
-    for(var c = 0; c < arr.length; c++){
-
-          year = new Date().getFullYear() - arr[c][3];
-          if(year > 0 ){
-            arr[c][3] = year;
-          }else{
-            arr[c][3] ="Invalid Date";
-          }
-
-   key = arr[c][0] + " " + arr[c][1];
-   newarrz = { firstName : arr[c][0] , lastName : arr[c][1], gender : arr[c][2] , age : arr[c][3] };
-    newarry.push( { [key] : newarrz });    
-  }
-  console.log(newarry);
-
-  
+        console.log(newarr);
+    }
 }
 
 // TEST CASES
