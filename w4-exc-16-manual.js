@@ -3,53 +3,25 @@ function graduates (students) {
   var obj ={};
   var stud = [];
   var studx=[];
-  var nmclass=[];
   if(students.length==0){
     return [];
 
   }else{
-
-var arr = [];
-var flag = true;
-for(var i = 0; i < students.length; i++){
-
-  arr.push(students[i].class);
-}
-
-
-
-
-var ress = [];
-for(var i = 0; i < arr.length; i++ ){
-  var flag = true;
-  for(var j = 0; j < arr.length; j++){
-
-    if(arr[i] == ress[j]) {
-        flag = false;
+  for(var i = 0; i < students.length; i++){
+    //console.log(students[i].score);
+    if(students[i].score > 75 && students[i].class =="foxes"){
+      key = students[i].class;
+      studx.push( {nama : students[i].name, score :students[i].score});
     }
+    if(students[i].score > 75 && students[i].class =="wolves"){
+      key = students[i].class;
+      stud.push( {nama : students[i].name, score :students[i].score});
+    }     
   }
-
-  if(flag == true){
-    ress.push(arr[i]);
+  obj["foxes"]=studx;
+  obj["wolves"]=stud;
+  return obj;
   }
-}
-
-
-      for(var k = 0; k < ress.length; k++ ){  
-
-        for(var l = 0; l < students.length; l++){  
-          if(students[l].score > 75 && students[l].class ==ress[k]){ 
-            key = students[l].class;
-            stud.push( {nama : students[l].name, score :students[l].score});
-          } 
-        }
-        obj[ress[k]]=stud;
-        stud=[];
-      }
-    }
-
-    return obj;
-
 }
 
 console.log(graduates([
