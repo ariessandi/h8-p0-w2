@@ -1,81 +1,84 @@
 function highestScore (students) {
   // Code disini
-  var newarrx = [];
-  var newarry = [];
-  var newarrz = [];
-  var newarr = [];
-  var nameclass = [];
-  var  j = 1;
-  var flag = false;
-  var s = 0;
-  var temp;
-  var hasil = [];
+  var obj ={};
+  var stud = [];
+  var arr = [];
+  var flag = true;
+  var scorex = [];
+  var temm;
+  if(students.length==0){
+    return [];
 
-   for(var j = 0; j < students.length; j++){
-    if(students[j].class == 'foxes' ){
-      newarrx.push(students[j].score);
-
-    }
-   }
-
-   for(var k = 0; k < students.length; k++){
-    if(students[k].class == 'wolves' ){
-      newarr.push(students[k].score);
-
-    }
-   }
-
- for(var a = 0; a < newarr.length; a++){
-  for(var b = 0; b < newarr.length; b++){
-    if(newarr[b]<newarr[b+1]){
-      temp = newarr[b+1];
-      newarr[b+1] = newarr[b];
-      newarr[b] = temp;
-    }
-  }   
- }
-
-  for(var c = 0; c < newarrx.length; c++){
-  for(var d = 0; d < newarrx.length; d++){
-    if(newarrx[d]<newarrx[d+1]){
-      temp = newarrx[d+1];
-      newarrx[d+1] = newarrx[d];
-      newarrx[d] = temp;
-    }
-  }   
- }
+  }else{
 
 
-  for(var e = 0; e < students.length; e++){
-    if((students[e].score == newarrx[0]) && (students[e].class = 'foxes')){
-      //students[e].class = "foxes";
-       hasil.push(students[e]);
-    }
+  for(var i = 0; i < students.length; i++){
 
-    if((students[e].score == newarr[0]) && (students[e].class = 'wolves')){
+    arr.push(students[i].class);
     
-      //students[e].class = "wolves";
-       hasil.push(students[e]);
-       
+  }
+
+
+var ress = [];
+for(var i = 0; i < arr.length; i++ ){
+  var flag = true;
+  for(var j = 0; j < arr.length; j++){
+
+    if(arr[i] == ress[j]) {
+        flag = false;
     }
- 
-
   }
 
-
-  for(var c = 0; c < hasil.length; c++){
-   key = hasil[c].class;
-   newarrz = { name : hasil[c].name , score : hasil[c].score };
-    newarry.push({ [key] : newarrz });    
+  if(flag == true){
+    ress.push(arr[i]);
   }
+}
 
 
-return newarry;
+      for(var k = 0; k < ress.length; k++ ){  
+
+        for(var m = 0; m < students.length; m++){  
+          if(students[m].class ==ress[k]){ 
+
+scorex.push(students[m].score);
+
+for(var x = 0; x < scorex.length; x ++){
+  for(var y = 0; y < scorex.length; y ++){
+    if(scorex[y] < scorex[y+1]){
+      temm = scorex[y+1];
+      scorex[y+1] =scorex[y];
+      scorex[y] = temm;
+    }
+  }  
+}
 
 
+        }
+}
 
+for(var l = 0; l < students.length; l++){  
+
+ // console.log(scorex[0]);
+       if(students[l].score==scorex[0] &&students[l].class ==ress[k]){ 
+
+            key = students[l].class;
+            stud.push( {nama : students[l].name, score :students[l].score});
+
+            stud= {nama : students[l].name, score :students[l].score};
+          } 
+        }
+        obj[ress[k]]=stud;
+        stud=[];
+        scorex=[];
+      }
+    }
+
+    return obj;
 
 }
+
+
+
 
 // TEST CASE
 console.log(highestScore([
@@ -106,3 +109,40 @@ console.log(highestScore([
 //   wolves: { name: 'Alexei', score: 85 }
 // }
 
+
+console.log(highestScore([
+  {
+    name: 'Alexander',
+    score: 100,
+    class: 'foxes'
+  },
+  {
+    name: 'Alisa',
+    score: 76,
+    class: 'wolves'
+  },
+  {
+    name: 'Vladimir',
+    score: 92,
+    class: 'foxes'
+  },
+  {
+    name: 'Albert',
+    score: 71,
+    class: 'wolves'
+  },
+  {
+    name: 'Viktor',
+    score: 80,
+    class: 'tigers'
+  }
+]));
+
+// {
+//   foxes: { name: 'Alexander', score: 100 },
+//   wolves: { name: 'Alisa', score: 76 },
+//   tigers: { name: 'Viktor', score: 80 }
+// }
+
+
+console.log(highestScore([])); //{}
