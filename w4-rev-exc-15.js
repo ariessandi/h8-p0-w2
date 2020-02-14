@@ -61,9 +61,6 @@ for(var l = 0; l < students.length; l++){
  // console.log(scorex[0]);
        if(students[l].score==scorex[0] &&students[l].class ==ress[k]){ 
 
-            key = students[l].class;
-            stud.push( {nama : students[l].name, score :students[l].score});
-
             stud= {nama : students[l].name, score :students[l].score};
           } 
         }

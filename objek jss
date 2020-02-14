@@ -1,0 +1,58 @@
+object -->{
+	weight : '40kg',
+	name : 'semi',
+	age : '17'
+}
+
+
+key : value -->key itu string
+
+var semi ={
+	weight : '40kg',
+	name : 'semi',
+	age : '17'
+}
+
+// . dot --> untuk mnambah key
+
+semi.height = '190cm';
+
+semi['company'] = 'hactiv8'
+
+var nama='kolom'
+
+semi[nama] = 'wni';
+
+for(var key in semi){
+	console.log(semi[key]);
+}
+
+objek ga bs di length
+
+for(var i = 0; i < semi.length;i++){  }-->ERROR
+
+agar ga error convert dulu objek jd array 
+
+var arrFromObject = objects.keys(semi);
+
+for(var i = 0; i < arrFromObject.length;i++){
+	
+}
+
+
+object.values
+object.entries
+
+delete semi.namaKey
+
+array of object
+
+
+for(var i = 0; i<students.length;i++){
+	
+	for(var key in students[i]){
+		console.log(key , ' dan value ',students[i][key]
+	}
+	var nmobjek = [{nama:'abc',age:21},{nama:'def',age:18},{nama:'ghi',age:31}]	
+}
+
