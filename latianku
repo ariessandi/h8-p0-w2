@@ -1,0 +1,72 @@
+/*
+var semi ={
+	weight : '40kg',
+	name : 'semi',
+	age : '17'
+}
+
+// . dot --> untuk mnambah key
+
+semi.height = '190cm';
+
+semi['company'] = 'hactiv8'
+
+delete semi.name;
+
+console.log(semi);
+
+var obj = { 0: 'a', 1: 'b', 2: 'c' };
+console.log(Object.keys(obj));
+
+console.log(Object.values(obj));
+
+
+*/
+/*
+var ara= [1,3,5,2,4,7];
+var temp;
+for(var i = 0; i < ara.length; i++){
+  for(var j = 0; j < ara.length; j++){
+     if(ara[j] > ara[j+1]){
+       temp= ara[j+1];
+       ara[j+1]=ara[j];
+       ara[j]=temp;
+     }
+  }
+ 
+}
+
+ console.log(ara);
+
+*/
+
+/*
+var arr = ['meja','bola','bola','kuda','meja','kuda'];
+
+//var arr=['Meja','Meja','Sepatu','Buku','Buku','Meja'];
+var ress =[];
+
+//looping i
+for(var i =0; i < arr.length; i++){
+var flag = true;
+for(var j = 0; j < arr.length; j++){
+  if(arr[i] == ress[j]){
+    flag = false;
+  }
+}
+if(flag == true){
+  ress.push(arr[i]);
+}
+
+}
+console.log(ress);
+
+*/
+
+
+var kuda ={
+  nama : 'sandi',
+  age : '32'
+}
+
+console.log(kuda.nama)
