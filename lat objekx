@@ -1,0 +1,42 @@
+arr = 'apa Apa Iya apa'
+let obj={}
+for(let i=0; i < arr.length;i++){
+	obj[arr[i]] = 0
+}
+
+//return Object.keys(obj);
+console.log(Object.keys(obj));
+
+
+
+
+
+function allInLower(string){
+	return string.toLowerCase();
+}
+
+function splitGakManual(str){
+	return str.split(' ');	
+
+}
+
+function uniquenya(arr){
+	let obj={}
+	for(let i=0; i < arr.length;i++){
+		obj[arr[i]] = 0
+	}
+	return Object.keys(obj);
+
+}
+
+function join(arr){
+	return arr.join('-');	
+
+}
+
+function getUnique(str){
+  return	join(uniquenya(splitGakManual(allInLower(str))))
+}
+
+
+console.log (getUnique('apa Apa Iya apa'));
